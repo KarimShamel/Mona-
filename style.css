@@ -1,0 +1,262 @@
+:root{
+    --pink:#ffd8e5;
+    --blush:#ff8cb4;
+    --rose:#e86592;
+    --gold:#f0c987;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(
+    135deg,
+    #fff7fa,
+    #ffe4ee,
+    #fff);
+    overflow-x:hidden;
+    color:#444;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:900px;
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:60px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+    animation:fadeIn 1.5s ease;
+}
+
+.hero h1{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(3rem,8vw,6rem);
+    color:var(--rose);
+}
+
+.subtitle{
+    font-size:1.3rem;
+    margin:20px 0;
+    font-weight:600;
+}
+
+.hero-text{
+    line-height:1.8;
+}
+
+.countdown-card{
+    margin-top:30px;
+    background:linear-gradient(
+    45deg,
+    var(--rose),
+    var(--blush));
+    color:white;
+    padding:15px;
+    border-radius:100px;
+    display:inline-block;
+}
+
+/* GALLERY */
+
+.gallery-section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.gallery-section h2{
+    font-family:'Dancing Script';
+    font-size:3rem;
+    color:var(--rose);
+    margin-bottom:40px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+/* QUIZ */
+
+.quiz-section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.quiz-section h2{
+    font-family:'Dancing Script';
+    font-size:3rem;
+    color:var(--rose);
+    margin-bottom:40px;
+}
+
+.quiz-card{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+#question{
+    margin:20px 0;
+}
+
+.answer-btn{
+    width:100%;
+    margin:10px 0;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    background:#ffe3ec;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.answer-btn:hover{
+    background:#ffc4d7;
+}
+
+#feedback{
+    margin-top:20px;
+    color:var(--rose);
+    font-weight:600;
+}
+
+/* MUSIC */
+
+.music-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    font-size:1.3rem;
+    cursor:pointer;
+    background:var(--rose);
+    color:white;
+    z-index:1000;
+}
+
+/* LETTER */
+
+#finale{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.letter{
+    background:white;
+    max-width:700px;
+    border-radius:30px;
+    padding:50px;
+    text-align:center;
+    animation:pop .7s ease;
+}
+
+.letter h2{
+    font-family:'Dancing Script';
+    color:var(--rose);
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.letter p{
+    font-size:1.2rem;
+    line-height:2;
+}
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation:float 10s linear infinite;
+    opacity:.25;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-20vh);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+@keyframes pop{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.confetti{
+    position:fixed;
+    top:-10px;
+    width:10px;
+    height:10px;
+    animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
