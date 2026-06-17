@@ -63,19 +63,19 @@ const questions=[
 
 {
 q:"What is my absolute favorite nickname for you?",
-a:["Princess","Lolo","Angel","Habibti"],
+a:["Monmonty","Lolo","Nony","Just Mona"],
 correct:"Lolo"
 },
 
 {
 q:"Which food always reminds me of you?",
-a:["Pizza","Qashtota Manga","Burger","Pasta"],
+a:["Shin Ramen","Qashtota Manga","Burger","Sushi"],
 correct:"Qashtota Manga"
 },
 
 {
 q:"What is the one thing I desire most in this world?",
-a:["Money","Travel","To marry you","A Mansion"],
+a:["Money","Success","To marry you","Ma7shy"],
 correct:"To marry you"
 },
 
@@ -88,10 +88,10 @@ correct:"Your nose"
 {
 q:"What is the sentence you say that I love hearing the most?",
 a:[
-"Good Morning",
+"Ya sabah el kheir",
 "Bs ya zeft",
-"I Miss You",
-"Let's Eat"
+"Ya haywan",
+"Enta Fein"
 ],
 correct:"Bs ya zeft"
 }
@@ -159,7 +159,7 @@ function selectAnswer(answer){
     }else{
 
         feedback.innerHTML=
-        "Try again, my love! 🥺";
+        "Try again, ya ghabya!";
     }
 }
 
